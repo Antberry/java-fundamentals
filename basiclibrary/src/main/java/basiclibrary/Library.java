@@ -4,6 +4,7 @@
 package basiclibrary;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 
@@ -18,15 +19,16 @@ public class Library {
     }
 
     public boolean containsDuplicates(int[] array){
+        boolean prevNumMatch = false ;
         int prevNum = 0;
+        Arrays.sort(array);
         for (int i = 0; i < array.length; i++){
-            if(i == prevNum){
-                return true;
-            } else if(i != prevNum){
-                prevNum = i;
+            if(array[i] == array[i + 1]){
+                prevNumMatch = true;
+                break;
             }
         }
-        return true;
+        return prevNumMatch;
     }
 
     public float calArrAvg(int[] array){
