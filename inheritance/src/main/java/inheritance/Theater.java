@@ -1,11 +1,11 @@
 package inheritance;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class Theater {
     private String name;
-    private String movieName;
-    private List<String> moviesShowing;
+    private HashSet<String> moviesShowing;
 
     public String getName() {
         return name;
@@ -15,16 +15,31 @@ public class Theater {
         this.name = name;
     }
 
-    public List<String> getMoviesShowing() {
+    public HashSet<String> getMoviesShowing() {
         return moviesShowing;
     }
 
-    public void setMoviesShowing(List<String> moviesShowing) {
+    public void setMoviesShowing(HashSet<String> moviesShowing) {
         this.moviesShowing = moviesShowing;
     }
 
-    public Theater(String name, String movieName){
+    public Theater(String name, HashSet<String> moviesShowing){
         this.name = name;
-        this.movieName = movieName;
+        this.moviesShowing = moviesShowing;
     }
+
+    public HashSet<String>removeMovie(String movieName){
+        moviesShowing.remove(movieName);
+        return moviesShowing;
+    }
+
+    public HashSet<String> addMovie(String movieName){
+        moviesShowing.add(movieName);
+        return moviesShowing;
+    }
+
+    public String toString(){
+        return String.format("%s; has %s showing", this.name, this.moviesShowing);
+    }
+
 }
