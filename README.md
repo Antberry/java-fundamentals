@@ -14,5 +14,6 @@
 
 ## Lab 09: Potent Quotables
 
-You can run my code in the terminal using ./gradlew run
+You can run my code in the terminal using ./gradlew run.
+
 you can also run my code by opening it in intelliJ and click the run code icon in the upper-right corner of the program itself.
