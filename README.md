@@ -12,7 +12,7 @@
   I written a new toString() method to override the default toString() method that all objects in Java recieve. 
   I created a addReview method on to the Restaurant Class so reviews can be added to a ArrayList and the I can calculate the Number of Stars the Restaurant have after it recieves a new review.
 
-# Lab 09: Potent Quotables
+## Lab 09: Potent Quotables
 
 You can run my code in the terminal using ./gradlew run
 you can also run my code by opening it in intelliJ and click the run code icon in the upper-right corner of the program itself.
